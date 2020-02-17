@@ -41,7 +41,7 @@ def cityreader(cities=[]):
             rowSet[header] = row[h]
         # add city data to fields
         print(f'[{i}] {rowSet}')
-        cities.append(City(rowSet['city'], rowSet['lat'], rowSet['lng']))
+        cities.append(City(rowSet['city'], float(rowSet['lat']), float(rowSet['lng'])))
 
     
   return cities
